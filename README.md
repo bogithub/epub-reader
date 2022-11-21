@@ -92,3 +92,18 @@ libs          node_modules  package.json  reader             src
 │ 0  │ serve              │ fork     │ 0    │ online    │ 0%       │ 35.7mb   │
 └────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
 [PM2][WARN] Current process list is not synchronized with saved list. App app differs. Type 'pm2 save' to synchronize.
+
+change GIT
+
+[opc@instance-20221019-2131 epubjs-reader]$ git remote rename origin upstream
+[opc@instance-20221019-2131 epubjs-reader]$ git remote add origin https://github.com/bogithub/epub-reader
+[opc@instance-20221019-2131 epubjs-reader]$ git push origin master
+Enumerating objects: 186, done.
+Counting objects: 100% (186/186), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (111/111), done.
+Writing objects: 100% (186/186), 2.56 MiB | 33.13 MiB/s, done.
+Total 186 (delta 79), reused 159 (delta 67), pack-reused 0
+remote: Resolving deltas: 100% (79/79), done.
+To https://github.com/bogithub/epub-reader
+ * [new branch]      master -> master
