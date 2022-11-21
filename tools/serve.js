@@ -38,15 +38,15 @@ function allowCrossDomain(req, res, next) {
 function listen(port) {
 
   var app = express();
-  //var staticServer = serveStatic(path.resolve(__dirname, '../reader/'), {'index': ['index.html', 'index.htm']})
-  var staticServer2 = serveStatic(path.resolve(__dirname, '../reader/'), {'book2': ['book2.html', 'book2.htm']})
+  var staticServer = serveStatic(path.resolve(__dirname, '../reader/'), {'index': ['index.html', 'index.htm']})
+  //var staticServer2 = serveStatic(path.resolve(__dirname, '../reader/'), {'book2': ['book2.html', 'book2.htm']})
 
 
   var server = http.createServer(app);
 
   app.use(allowCrossDomain);
-  //app.use(staticServer);
-  app.use (staticServer2);
+  app.use(staticServer);
+  //app.use (staticServer2);
 
   if(!logger) app.use(morgan('dev'))
 
