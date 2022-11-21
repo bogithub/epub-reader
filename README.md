@@ -107,3 +107,20 @@ Total 186 (delta 79), reused 159 (delta 67), pack-reused 0
 remote: Resolving deltas: 100% (79/79), done.
 To https://github.com/bogithub/epub-reader
  * [new branch]      master -> master
+
+
+ git branch --set-upstream-to origin/master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+[opc@instance-20221019-2131 epubjs-reader]$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 650 bytes | 650.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/bogithub/epub-reader
+   ec5d3d1..acfd2ca  master -> master
+
+
+   git add . && git commit -a -m "commit" && git push
