@@ -66,3 +66,29 @@ Other
 -------------------------
 
 EPUB is a registered trademark of the [IDPF](http://idpf.org/).
+
+
+Run this:
+[opc@instance-20221019-2131 epubjs-reader]$ sudo npm install pm2 -g
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+
+changed 184 packages, and audited 185 packages in 5s
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[opc@instance-20221019-2131 epubjs-reader]$ ls
+Gruntfile.js  LICENSE       nohup.out     package-lock.json  README.md  tools
+libs          node_modules  package.json  reader             src
+[opc@instance-20221019-2131 epubjs-reader]$ pm2 start tools/serve
+[PM2] Spawning PM2 daemon with pm2_home=/home/opc/.pm2
+[PM2] PM2 Successfully daemonized
+[PM2] Starting /home/opc/projects/futurepress/epubjs-reader/tools/serve in fork_mode (1 instance)
+[PM2] Done.
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ serve              │ fork     │ 0    │ online    │ 0%       │ 35.7mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+[PM2][WARN] Current process list is not synchronized with saved list. App app differs. Type 'pm2 save' to synchronize.
